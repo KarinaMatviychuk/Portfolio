@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Lexend+Giga:wght@100..900&family=Luxurious+Roman&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+VN:wght@100..400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Jersey+15&family=Lexend+Giga:wght@100..900&family=Luxurious+Roman&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+VN:wght@100..400&family=Poetsen+One&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- <svg width="0" height="0" class="hidden">
+        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="html-logo">
+          <path d="M6 28L4 3H28L26 28L16 31L6 28Z" fill="#E44D26"></path>
+          <path d="M26 5H16V29.5L24 27L26 5Z" fill="#F16529"></path>
+          <path d="M9.5 17.5L8.5 8H24L23.5 11H11.5L12 14.5H23L22 24L16 26L10 24L9.5 19H12.5L13 21.5L16 22.5L19 21.5L19.5 17.5H9.5Z" fill="white"></path>
+        </symbol>
+    </svg> -->
+
+    <!-- <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="css-logo">
+          <title>file_type_css</title>
+          <polygon points="5.902 27.201 3.656 2 28.344 2 26.095 27.197 15.985 30 5.902 27.201" fill="#1572b6"></polygon>
+          <polygon points="16 27.858 24.17 25.593 26.092 4.061 16 4.061 16 27.858" fill="#33a9dc"></polygon>
+          <polygon points="16 13.191 20.09 13.191 20.372 10.026 16 10.026 16 6.935 16.011 6.935 23.75 6.935 23.676 7.764 22.917 16.282 16 16.282 16 13.191" fill="#ffffff"></polygon>
+          <polygon points="16.019 21.218 16.005 21.222 12.563 20.292 12.343 17.827 10.67 17.827 9.24 17.827 9.673 22.68 16.004 24.438 16.019 24.434 16.019 21.218" fill="#ebebeb"></polygon>
+          <polygon points="19.827 16.151 19.455 20.29 16.008 21.22 16.008 24.436 22.344 22.68 22.391 22.158 22.928 16.151 19.827 16.151" fill="#fff"></polygon>
+          <polygon points="16.011 6.935 16.011 8.855 16.011 10.018 16.011 10.026 8.555 10.026 8.555 10.026 8.545 10.026 8.483 9.331 8.342 7.764 8.268 6.935 16.011 6.935" fill="#ebebeb"></polygon>
+          <polygon points="16 13.191 16 15.111 16 16.274 16 16.282 12.611 16.282 12.611 16.282 12.601 16.282 12.539 15.587 12.399 14.02 12.325 13.191 16 13.191" fill="#ebebeb"></polygon>
+        </symbol>
+    </svg> -->
+
+    <!-- <svg width="0" height="0" class="hidden">
+        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="js-logo">
+          <rect x="2" y="2" width="28" height="28" fill="#FFCA28"></rect>
+          <path d="M19 25.2879L21.0615 23.9237C21.2231 24.4313 22.2462 25.6368 23.5385 25.6368C24.8308 25.6368 25.4308 24.931 25.4308 24.463C25.4308 23.1878 24.1112 22.7382 23.4774 22.5223C23.374 22.4871 23.289 22.4581 23.2308 22.4328C23.2009 22.4198 23.1558 22.4025 23.0979 22.3804C22.393 22.1111 19.7923 21.1175 19.7923 18.2373C19.7923 15.065 22.8538 14.7002 23.5462 14.7002C23.9991 14.7002 26.1769 14.7557 27.2615 16.7939L25.2615 18.1898C24.8231 17.3015 24.0946 17.0081 23.6462 17.0081C22.5385 17.0081 22.3077 17.8201 22.3077 18.1898C22.3077 19.227 23.5112 19.6919 24.5273 20.0844C24.7932 20.1871 25.0462 20.2848 25.2615 20.3866C26.3692 20.91 28 21.7666 28 24.463C28 25.8136 26.8672 28.0002 24.0154 28.0002C20.1846 28.0002 19.1692 25.7003 19 25.2879Z" fill="#3E3E3E"></path>
+          <path d="M9 25.5587L11.1487 24.1953C11.317 24.7026 11.9713 25.638 12.9205 25.638C13.8698 25.638 14.3557 24.663 14.3557 24.1953V15.0002H16.9982V24.1953C17.041 25.4636 16.3376 28.0002 13.2332 28.0002C10.379 28.0002 9.19242 26.3039 9 25.5587Z" fill="#3E3E3E"></path>
+        </symbol>
+    </svg> -->
+
+    <!-- <svg width="0" height="0" class="hidden">
+        <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256" id="bootstrap-logo">
+          <g>
+            <path d="M0,222.991225 C0,241.223474 14.7785318,256 33.0087747,256 L222.991225,256 C241.223474,256 256,241.221468 256,222.991225 L256,33.0087747 C256,14.7765263 241.221468,0 222.991225,0 L33.0087747,0 C14.7765263,0 0,14.7785318 0,33.0087747 L0,222.991225 Z" fill="#563D7C"></path>
+            <path d="M106.157563,113.238095 L106.157563,76.9845938 L138.069328,76.9845938 C141.108559,76.9845938 144.039202,77.2378593 146.861345,77.7443978 C149.683488,78.2509362 152.179961,79.1554557 154.35084,80.4579832 C156.52172,81.7605107 158.258397,83.5695496 159.560924,85.8851541 C160.863452,88.2007585 161.514706,91.1675823 161.514706,94.7857143 C161.514706,101.298352 159.560944,106.001853 155.653361,108.896359 C151.745779,111.790864 146.752832,113.238095 140.67437,113.238095 L106.157563,113.238095 L106.157563,113.238095 Z M72.07493,50.5 L72.07493,205.5 L147.186975,205.5 C154.133788,205.5 160.899594,204.631661 167.484594,202.894958 C174.069594,201.158255 179.93088,198.480877 185.068627,194.862745 C190.206375,191.244613 194.294803,186.577293 197.334034,180.860644 C200.373264,175.143996 201.892857,168.37819 201.892857,160.563025 C201.892857,150.866431 199.541107,142.581033 194.837535,135.706583 C190.133963,128.832132 183.00635,124.020088 173.454482,121.270308 C180.401295,117.941627 185.647508,113.672295 189.193277,108.462185 C192.739047,103.252075 194.511905,96.7395349 194.511905,88.9243697 C194.511905,81.6881057 193.317939,75.6097352 190.929972,70.6890756 C188.542005,65.7684161 185.177193,61.8247114 180.835434,58.8578431 C176.493676,55.8909749 171.283644,53.756309 165.205182,52.4537815 C159.12672,51.151254 152.397096,50.5 145.016106,50.5 L72.07493,50.5 L72.07493,50.5 Z M106.157563,179.015406 L106.157563,136.466387 L143.279412,136.466387 C150.660401,136.466387 156.594049,138.166883 161.080532,141.567927 C165.567016,144.968971 167.810224,150.649353 167.810224,158.609244 C167.810224,162.661552 167.122789,165.990183 165.747899,168.595238 C164.373009,171.200293 162.527789,173.262597 160.212185,174.782213 C157.89658,176.301828 155.219203,177.387252 152.179972,178.038515 C149.140741,178.689779 145.956833,179.015406 142.628151,179.015406 L106.157563,179.015406 L106.157563,179.015406 Z" fill="#FFFFFF"></path>
+          </g>
+        </symbol>
+    </svg> -->
+
+    <!-- <svg width="0" height="0" class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" aria-label="Sass" role="img" viewBox="0 0 512 512" id="sass-logo">
+          <rect width="512" height="512" rx="15%" fill="#c69"></rect>
+          <path d="M258,88c-96,33-158,100-152,140s66,72,93,93h0c-35,18-79,45-78,80,2,48,54,33,76,19s44-53,30-94c31-8,58,2,66,8,31,22,15,47,4,51s-4,6,3,4,22-12,22-29c0-43-46-63-103-48-33-35-78-51-76-89,1-14,6-50,95-95s152-27,144,14c-12,62-120,104-158,68-2-4-9-7-5,4,20,50,182,27,189-79C410,79,329,64,258,88ZM172,408c-25,8-24-8-23-14,3-17,17-38,59-59C220,373,193,402,172,408Z" fill="#ffffff"></path>
+        </symbol>
+    </svg> -->
+
+    <svg width="0" height="0" class="hidden">
+        <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" viewBox="0 -1 256 256" id="visual-studio-logo">
+          <defs>
+            <path d="M180.82764,252.605272 C184.843951,254.170159 189.42406,254.069552 193.478224,252.11917 L245.979142,226.856851 C251.495593,224.202221 255.003889,218.618034 255.003889,212.49296 L255.003889,41.1971845 C255.003889,35.0719113 251.495593,29.4886211 245.979142,26.8339907 L193.478224,1.57068551 C188.158006,-0.989256713 181.931329,-0.362230036 177.262566,3.0323459 C176.595173,3.51727166 175.959655,4.05869672 175.363982,4.65536598 L74.8565893,96.3498444 L31.0778002,63.1181557 C27.0024197,60.0246398 21.3020866,60.2780499 17.5170718,63.7211005 L3.47578059,76.4937075 C-1.15402423,80.7052561 -1.15933349,87.9889043 3.46431538,92.2072265 L41.430759,126.844525 L3.46431538,161.482221 C-1.15933349,165.700742 -1.15402423,172.984291 3.47578059,177.19584 L17.5170718,189.967949 C21.3020866,193.411497 27.0024197,193.664509 31.0778002,190.571591 L74.8565893,157.339404 L175.363982,249.034221 C176.953772,250.625007 178.82048,251.823326 180.82764,252.605272 Z M191.291764,68.9559518 L115.029663,126.844525 L191.291764,184.733396 L191.291764,68.9559518 Z" id="path-1"></path>
+            <linearGradient x1="50.0000484%" y1="-3.91645412e-07%" x2="50.0000484%" y2="99.999921%" id="linearGradient-3">
+              <stop stop-color="#FFFFFF" offset="0%"></stop>
+              <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <g>
+            <mask id="mask-2" fill="white">
+              <use xlink:href="#path-1"></use>
+            </mask>
+            <g></g>
+            <path d="M246.134784,26.873337 L193.593025,1.57523773 C187.51178,-1.35300582 180.243173,-0.117807811 175.469819,4.65514684 L3.46641717,161.482221 C-1.16004072,165.700742 -1.1547215,172.984291 3.47789235,177.19584 L17.5276804,189.967949 C21.3150858,193.411497 27.0189053,193.664509 31.0966765,190.571591 L238.228667,33.4363005 C245.177523,28.1646927 255.158535,33.1209324 255.158535,41.8432608 L255.158535,41.2332436 C255.158535,35.11066 251.651235,29.5293619 246.134784,26.873337 Z" fill="#0065A9" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            <path d="M246.134784,226.816011 L193.593025,252.11419 C187.51178,255.041754 180.243173,253.806579 175.469819,249.034221 L3.46641717,92.2070273 C-1.16004072,87.9888047 -1.1547215,80.7049573 3.47789235,76.4935082 L17.5276804,63.7209012 C21.3150858,60.2778506 27.0189053,60.0243409 31.0966765,63.1179565 L238.228667,220.252649 C245.177523,225.524058 255.158535,220.568416 255.158535,211.84549 L255.158535,212.456104 C255.158535,218.57819 251.651235,224.159388 246.134784,226.816011 Z" fill="#007ACC" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            <path d="M193.428324,252.134497 C187.345086,255.060069 180.076479,253.823898 175.303125,249.050544 C181.184153,254.931571 191.240868,250.765843 191.240868,242.448334 L191.240868,11.2729623 C191.240868,2.95542269 181.184153,-1.21005093 175.303125,4.67135981 C180.076479,-0.102038107 187.345086,-1.3389793 193.428324,1.58667934 L245.961117,26.8500144 C251.481553,29.5046448 254.991841,35.0879351 254.991841,41.2132082 L254.991841,212.509283 C254.991841,218.634357 251.481553,224.217548 245.961117,226.872178 L193.428324,252.134497 Z" fill="#1F9CF0" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            <path d="M180.827889,252.605272 C184.8442,254.169163 189.424309,254.069552 193.477476,252.11917 L245.978395,226.855855 C251.495842,224.201225 255.004138,218.618034 255.004138,212.49296 L255.004138,41.1969853 C255.004138,35.0717121 251.495842,29.4884219 245.979391,26.8337915 L193.477476,1.57052613 C188.158255,-0.989423064 181.931578,-0.362396387 177.261819,3.03217656 C176.595422,3.51710232 175.959904,4.05852738 175.363235,4.65519664 L74.8565395,96.3496452 L31.0777504,63.1179565 C27.0024695,60.0244405 21.3020368,60.2779503 17.517022,63.7209012 L3.4757806,76.4935082 C-1.15402423,80.7050569 -1.15933349,87.9888047 3.46431539,92.2071269 L41.4308088,126.844525 L3.46431539,161.482221 C-1.15933349,165.700742 -1.15402423,172.984291 3.4757806,177.19584 L17.517022,189.967949 C21.3020368,193.411497 27.0024695,193.664509 31.0777504,190.571591 L74.8565395,157.339404 L175.363235,249.034221 C176.953025,250.625007 178.820729,251.823326 180.827889,252.605272 Z M191.292013,68.9557526 L115.029912,126.844525 L191.292013,184.733396 L191.292013,68.9557526 Z" fill-opacity="0.25" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+          </g>
+        </symbol>
+    </svg>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 73 73" id="github-logo">
+          <title>team-collaboration/version-control/github</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="team-collaboration/version-control/github" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="container" transform="translate(2.000000, 2.000000)" fill-rule="nonzero">
+              <rect id="mask" stroke="#000000" stroke-width="2" fill="#000000" x="-1" y="-1" width="71" height="71" rx="14"></rect>
+              <path d="M58.3067362,21.4281798 C55.895743,17.2972267 52.6253846,14.0267453 48.4948004,11.615998 C44.3636013,9.20512774 39.8535636,8 34.9614901,8 C30.0700314,8 25.5585181,9.20549662 21.4281798,11.615998 C17.2972267,14.0266224 14.0269912,17.2972267 11.615998,21.4281798 C9.20537366,25.5590099 8,30.0699084 8,34.9607523 C8,40.8357654 9.71405782,46.1187277 13.1430342,50.8109917 C16.5716416,55.5036246 21.0008949,58.7507436 26.4304251,60.5527176 C27.0624378,60.6700211 27.5302994,60.5875152 27.8345016,60.3072901 C28.1388268,60.0266961 28.290805,59.6752774 28.290805,59.2545094 C28.290805,59.1842994 28.2847799,58.5526556 28.2730988,57.3588401 C28.2610487,56.1650247 28.2553926,55.1235563 28.2553926,54.2349267 L27.4479164,54.3746089 C26.9330843,54.468919 26.2836113,54.5088809 25.4994975,54.4975686 C24.7157525,54.4866252 23.9021284,54.4044881 23.0597317,54.2517722 C22.2169661,54.1004088 21.4330982,53.749359 20.7075131,53.1993604 C19.982297,52.6493618 19.4674649,51.9294329 19.1631397,51.0406804 L18.8120898,50.2328353 C18.5780976,49.6950097 18.2097104,49.0975487 17.7064365,48.4426655 C17.2031625,47.7871675 16.6942324,47.3427912 16.1794003,47.108799 L15.9336039,46.9328437 C15.7698216,46.815909 15.6178435,46.6748743 15.4773006,46.511215 C15.3368806,46.3475556 15.2317501,46.1837734 15.1615401,46.0197452 C15.0912072,45.855594 15.1494901,45.7209532 15.3370036,45.6153308 C15.5245171,45.5097084 15.8633939,45.4584343 16.3551097,45.4584343 L17.0569635,45.5633189 C17.5250709,45.6571371 18.104088,45.9373622 18.7947525,46.4057156 C19.4850481,46.8737001 20.052507,47.4821045 20.4972521,48.230683 C21.0358155,49.1905062 21.6846737,49.9218703 22.4456711,50.4251443 C23.2060537,50.9284182 23.9727072,51.1796248 24.744894,51.1796248 C25.5170807,51.1796248 26.1840139,51.121096 26.7459396,51.0046532 C27.3072505,50.8875956 27.8338868,50.7116403 28.3256025,50.477771 C28.5362325,48.9090515 29.1097164,47.7039238 30.0455624,46.8615271 C28.7116959,46.721353 27.5124702,46.5102313 26.4472706,46.2295144 C25.3826858,45.9484285 24.2825656,45.4922482 23.1476478,44.8597436 C22.0121153,44.2280998 21.0701212,43.44374 20.3214198,42.5080169 C19.5725954,41.571802 18.9580429,40.3426971 18.4786232,38.821809 C17.9989575,37.300306 17.7590632,35.5451796 17.7590632,33.5559381 C17.7590632,30.7235621 18.6837199,28.3133066 20.5326645,26.3238191 C19.6665366,24.1944035 19.7483048,21.8072644 20.778215,19.1626478 C21.4569523,18.951772 22.4635002,19.1100211 23.7973667,19.6364115 C25.1314792,20.1630477 26.1082708,20.6141868 26.7287253,20.9882301 C27.3491798,21.3621504 27.8463057,21.6790175 28.2208409,21.9360032 C30.3978419,21.3277217 32.644438,21.0235195 34.9612442,21.0235195 C37.2780503,21.0235195 39.5251383,21.3277217 41.7022622,21.9360032 L43.0362517,21.0938524 C43.9484895,20.5319267 45.0257392,20.0169716 46.2654186,19.5488642 C47.5058357,19.0810026 48.4543466,18.9521409 49.1099676,19.1630167 C50.1627483,21.8077563 50.2565666,24.1947724 49.3901927,26.324188 C51.2390143,28.3136755 52.1640399,30.7245457 52.1640399,33.556307 C52.1640399,35.5455485 51.9232849,37.3062081 51.444357,38.8393922 C50.9648143,40.3728223 50.3449746,41.6006975 49.5845919,42.5256002 C48.8233486,43.4503799 47.8753296,44.2285916 46.7404118,44.8601125 C45.6052481,45.4921252 44.504759,45.9483056 43.4401742,46.2293914 C42.3750975,46.5104772 41.1758719,46.7217219 39.8420054,46.8621419 C41.0585683,47.9149226 41.6669728,49.5767225 41.6669728,51.846804 L41.6669728,59.2535257 C41.6669728,59.6742937 41.8132948,60.0255895 42.1061847,60.3063064 C42.3987058,60.5865315 42.8606653,60.6690374 43.492678,60.5516109 C48.922946,58.7498829 53.3521992,55.5026409 56.7806837,50.810008 C60.2087994,46.117744 61.923472,40.8347817 61.923472,34.9597686 C61.9222424,30.0695396 60.7162539,25.5590099 58.3067362,21.4281798 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+          </g>
+        </symbol>
+    </svg>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol version="1.1" id="letter-p" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 22.613 22.613">
+          <g>
+            <g>
+              <path d="M11.988,5.382c-1.969,0-3.559,1.815-3.559,4.057s1.59,4.058,3.559,4.058
+                  c1.968,0,3.562-1.816,3.562-4.058S13.956,5.382,11.988,5.382z" fill="#0ebda0"></path>
+              <path d="M20.715,0.001H1.9c-1.05,0-1.9,0.85-1.9,1.898v18.815c0,1.051,0.85,1.898,1.9,1.898h18.814
+                  c1.049,0,1.899-0.848,1.899-1.898V1.899C22.614,0.851,21.764,0.001,20.715,0.001z M11.988,14.839
+                  c-1.459,0-2.761-0.757-3.621-1.946v5.627H7.063V4.273h1.304v1.828c0.86-1.188,2.162-1.946,3.621-1.946
+                  c2.588,0,4.691,2.392,4.691,5.343C16.68,12.447,14.577,14.839,11.988,14.839z" fill="#0ebda0"></path>
+            </g>
+          </g>
+        </symbol>
+    </svg>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="phone-logo">
+          <path d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" fill="#cc40a9"></path>
+        </symbol>
+    </svg>
+
+    <svg width="0" height="0" class="hidden">
+        <symbol version="1.1" id="post-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+          <path d="M14,6.5V12c0,0.5523-0.4477,1-1,1H2c-0.5523,0-1-0.4477-1-1V6.5C1,6.2239,1.2239,6,1.5,6
+          c0.0692-0.0152,0.1408-0.0152,0.21,0l0,0l5.79,4l5.8-4l0,0c0.066-0.0138,0.134-0.0138,0.2,0C13.7761,6,14,6.2239,14,6.5z M1.25,3.92
+          L1.25,3.92L1.33,4L7.5,8l6.19-4l0,0h0.06l0,0c0.1796-0.0981,0.2792-0.2975,0.25-0.5C14,3.2239,13.7761,3,13.5,3h-12
+          C1.2239,3,1,3.2239,1,3.5C1.0026,3.6745,1.0978,3.8345,1.25,3.92z" fill="#8d2ce7"></path>
+        </symbol>
+    </svg>
+</head>
+<body>
+    <header>
+        <nav class="wrapper">
+            <p>Karina Matviichuk</p>
+            <div class="burger" id="burger"><span></span></div>
+            <div class="overlay" id="overlay"></div>
+            <div class="menu" id="menu">
+                <span class="close-menu" id="close-menu">&times;</span>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                 </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script src="burger.js"></script>
+
+    <main>
+        <div class="flex me wrapper" id="home">
+            <div class="my-photo">
+                <img src="img/me.png" alt="my photo">
+            </div>
+            <div class="introduction">
+                <p>Hi, I'm Karina Matviichuk!</p>
+                <p>I'm a Frontend Developer</p>
+                <div class="border-button">
+                    <p class="btn-call"><a href="tel:+380968729708">Call me</a></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <script src="animation.js"></script>
+
+        <div class="main-info wrapper" id="about">
+            <h2>About me</h2>
+            <div class="flex-main">
+                <!-- <div class="border"> -->
+                    <div class="about-me">
+                        <p>I'm a 19yo beginner creative frontend developer!</p>
+                        <p>My journey in web development began in my first year of university.</p>
+                        <p>Partially I studied programming - back-end, at the university, and I continue to study. So, I have a clear idea of ​​how it all works from different sides.</p>
+                    </div>
+                <!-- </div> -->
+                <div class="about-info">
+                    <div class="text-align">
+                        <div class="border-new slider-wrapper">
+                            <div class="education">
+                                <p class="text-title">Education:</p>
+                                <div class="slider-inner" id="education-slider">
+                                    <div class="flex-me" id="university">
+                                        <p class="year">2023-2027</p>
+                                        <div class="education-align">
+                                            <p>Khmelnytskyi national university</p>
+                                            <p>Faculty of Information Technology, software engineering</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-me" id="school-html">
+                                        <p class="year">2023-2024</p>
+                                        <div class="education-align">
+                                            <p>IT school «Hashtag academy»</p>
+                                            <p>HTML + CSS advanced, php basics</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex-me" id="school-js">
+                                        <p class="year">2024-2025</p>
+                                        <div class="education-align">
+                                            <p>IT school «Hashtag academy»</p>
+                                            <p>JavaScript developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-controls" id="slider-controls">
+                                <button id="prev">&lt;</button>
+                                <button id="next">&gt;</button>
+                            </div>
+                        </div>
+                        
+                        <script src="slider.js"></script>
+
+
+
+                        <div class="border-new"> 
+                            <div class="skills">
+                                <p class="text-title">Skills:</p>
+                                <ul>
+                                    <li>Creative thinking</li>
+                                    <li>Quick adaptation and learning</li>
+                                    <li>Logical</li>
+                                    <li>Time management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="text-align">
+                        <div class="border-new">
+                            <div class="software-skills">
+                                <p class="text-title">Software skills:</p>
+                                <ul>
+                                    <li>
+                                        <p>HTML:</p>
+                                        <span class="one-hundred-percent"></span>
+                                    </li>
+                                    <li>
+                                        <p>CSS:</p>
+                                        <span class="one-hundred-percent"></span>
+                                        
+                                    </li>
+                                    <li>
+                                        <p>JS:</p>
+                                        <span class="sixty-percent"></span>
+                                        
+                                    </li>
+                                    <li>
+                                        <p>Bootstrap:</p>
+                                        <span class="ninety-percent"></span>
+                                        
+                                    </li>
+                                    <li>
+                                        <p>Sass:</p>
+                                        <span class="ninety-percent"></span>
+                                        
+                                    </li>
+                                    <li>
+                                        <p>SQL:</p>
+                                        <span class="thirty-percent"></span>
+                                    </li>
+                                    <li>
+                                        <p>Java:</p>
+                                        <span class="fifteen-percent"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="margin">
+                            <div class="border-tools">  
+                                <div class="tools">
+                                    <p class="text-title">Tools: </p>
+                                    <div class="flex-tools">
+                                        <div class="svg-logo">
+                                            <svg class="icon">
+                                                <use xlink:href="#visual-studio-logo"></use>
+                                            </svg>
+                                            <p>VS Code</p>
+                                        </div>
+                                        <div class="svg-logo">
+                                            <svg class="icon">
+                                                <use xlink:href="#github-logo"></use>
+                                            </svg>
+                                            <p>GitHub</p>
+                                        </div>
+                                        <div class="svg-logo">
+                                            <svg class="icon">
+                                                <use xlink:href="#letter-p"></use>
+                                            </svg>
+                                            <p>Photopea</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    
+    
+                </div>
+                
+
+
+            </div>
+            
+        </div>
+
+        <hr>
+
+        <div class="projects wrapper" id="projects">
+            <h2>My projects</h2>
+            <div class="flex-works">
+                <div class="works">
+                    <!-- <div class="gradient"></div> -->
+                    <div class="work-div">
+                        <a href="https://karinamatviychuk.github.io/hata/" target="_blank">
+                            <img src="img/hata-preview.png" alt="Hata preview">
+                            <h3>Hata-plus</h3>
+                            <p>HTML/CSS</p>
+                            <div class="projects-button">
+                                <a href="#" class="read-more-btn" data-popup="popup-hata">read more</a>
+                                <a href="https://karinamatviychuk.github.io/hata/" target="_blank" class="border-btn">preview</a>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="popup-hata" class="popup-overlay">
+                        <div class="popup-content">
+                            <span class="close-btn">&times;</span>
+                            <h4>Hata-plus Project</h4>
+                            <div class="popup-about">
+                                <p>Technologies used:</p>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>Characteristics:</p>
+                                <ul>
+                                    <li>Multi-page website</li>
+                                    <li>First page - main(головна) - product introduction</li>
+                                    <li>Second page - Our buildings(Наші будівлі) - Information about buildings and their selection</li>
+                                    <li>Third page - Contacts(Контакти) - Company contact and location</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="popup.js"></script>
+
+
+                    <div class="work-div">
+                        <a href="https://karinamatviychuk.github.io/misocial/" target="_blank">
+                            <img src="img/misocial-preview.png" alt="Misocial preview">
+                            <h3>Misocial</h3>
+                            <p>Bootstrap/Sass</p>
+                            <div class="projects-button">
+                                <a href="#" class="read-more-btn" data-popup="popup-misocial">read more</a>
+                                <a href="https://karinamatviychuk.github.io/misocial/" target="_blank" class="border-btn">preview</a>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="popup-misocial" class="popup-overlay">
+                        <div class="popup-content">
+                            <span class="close-btn">&times;</span>
+                            <h4>Misocial Project</h4>
+                            <div class="popup-about">
+                                <p>Technologies used:</p>
+                                <ul>
+                                    <li>Bootstrap</li>
+                                    <li>Sass</li>
+                                </ul>
+                                <p>Characteristics:</p>
+                                <ul>
+                                    <li>One-page website</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-div">
+                        <a href="https://karinamatviychuk.github.io/SeaTrips/" target="_blank">
+                            <img src="img/seaTrips-preview.png" alt="SeaTrips preview">
+                            <h3>SeaTrips</h3>
+                            <p>Bootstrap/Sass</p>
+                            <div class="projects-button">
+                                <a href="#" class="read-more-btn" data-popup="popup-seatrips">read more</a>
+                                <a href="https://karinamatviychuk.github.io/SeaTrips/" target="_blank" class="border-btn">preview</a>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="popup-seatrips" class="popup-overlay">
+                        <div class="popup-content">
+                            <span class="close-btn">&times;</span>
+                            <h4>SeaTrips Project</h4>
+                            <div class="popup-about">
+                                <p>Technologies used:</p>
+                                <ul>
+                                    <li>Bootstrap</li>
+                                    <li>Sass</li>
+                                </ul>
+                                <p>Characteristics:</p>
+                                <ul>
+                                    <li>One-page website</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work-div">
+                        <a href="https://karinamatviychuk.github.io/Startup/" target="_blank">
+                            <img src="img/startup-preview.png" alt="Startup preview">
+                            <h3>Startup</h3>
+                            <p>JavaScript</p>
+                            <div class="projects-button">
+                                <a href="#" class="read-more-btn" data-popup="popup-startup">read more</a>
+                                <a href="https://karinamatviychuk.github.io/Startup/" target="_blank" class="border-btn">preview</a>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="popup-startup" class="popup-overlay">
+                        <div class="popup-content">
+                            <span class="close-btn">&times;</span>
+                            <h4>Startup Project</h4>
+                            <div class="popup-about">
+                                <p>Technologies used:</p>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                                <p>Characteristics:</p>
+                                <ul>
+                                    <li>One-page website</li>
+                                    <li>Button "Get started" - popup with registration</li>
+                                    <li>Block "About us" - pictures with people - slider</li>
+                                    <li>Block "Latest work" - selection of categories</li>
+                                    <li>Block "Recent blog posts - text "Read more" - popup with additional information</li>
+                                    <li>Automatically switch quotes, or if you need to manually switch them</li>
+                                    <li>A form that can be sent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <hr>
+    </main>
+
+    <footer class="wrapper">
+        <div class="contacts" id="contacts">
+            <h2>Contacts</h2>
+            <div class="flex-contacts">
+                <div>
+                    <div class="svg-contacts">
+                        <svg class="icon">
+                            <use xlink:href="#phone-logo"></use>
+                        </svg>
+                        <p><a href="tel:+380968729708">+38(096)872-97-08</a></p>
+                    </div>
+                </div>
+                <div class="mail">
+                    <div class="svg-contacts">
+                        <svg class="icon">
+                            <use xlink:href="#post-logo"></use>
+                        </svg>
+                        <p><a href="mailto:matviychuk.karina2005@gmail.com">matviychuk.karina2005@gmail.com</a></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="svg-contacts">
+                        <svg class="icon">
+                            <use xlink:href="#github-logo"></use>
+                        </svg>
+                        <p><a href="https://github.com/KarinaMatviychuk">Karina Matviychuk</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
