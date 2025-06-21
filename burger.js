@@ -35,9 +35,3 @@ menuLinks.forEach(link => {
     });
 });
 
-// Закриття при кліку поза меню (резервне)
-document.addEventListener("click", function(e) {
-    if (!menu.contains(e.target) && !burger.contains(e.target)) {
-        closeMenu();
-    }
-});

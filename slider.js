@@ -16,16 +16,12 @@ function updateSlidePosition() {
 function activateSlider() {
   if (isSliderActive) return;
 
-//   sliderInner.style.display = 'flex';
   sliderInner.style.transition = 'transform 0.3s ease-in-out';
-//   sliderInner.style.width = `${slides.length * 100}%`;
-//   sliderInner.style.overflow = 'hidden';
 
   slides.forEach(slide => {
     slide.style.minWidth = '100%';
     slide.style.boxSizing = 'border-box';
     slide.style.flexShrink = '0';
-    slide.style.textAlign = 'center';
   });
 
   controls.style.display = 'flex';
@@ -36,7 +32,6 @@ function activateSlider() {
 function deactivateSlider() {
   if (!isSliderActive) return;
 
-  // Повертаємо слайдам стандартний вигляд
   sliderInner.style.transform = '';
   sliderInner.style.display = '';
   sliderInner.style.transition = '';
@@ -47,7 +42,6 @@ function deactivateSlider() {
     slide.style.minWidth = '';
     slide.style.boxSizing = '';
     slide.style.flexShrink = '';
-    slide.style.textAlign = '';
   });
 
   controls.style.display = 'none';
@@ -63,7 +57,6 @@ function checkSlider() {
   }
 }
 
-// Кнопки
 prevBtn.addEventListener('click', () => {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   updateSlidePosition();
@@ -74,6 +67,5 @@ nextBtn.addEventListener('click', () => {
   updateSlidePosition();
 });
 
-// Слухачі
 window.addEventListener('resize', checkSlider);
 window.addEventListener('DOMContentLoaded', checkSlider);
